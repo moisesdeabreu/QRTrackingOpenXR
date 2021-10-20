@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class QRManager : MonoBehaviour
 {
-    QRCode qrCode;
+    QRTracking.QRCode qrCode;
     Vector3 qrPosition;
     Quaternion qrRotation;
 
@@ -23,7 +23,8 @@ public class QRManager : MonoBehaviour
     public void GetPosition()
     {
         
-        qrCode = GameObject.Find("TableAnchor").GetComponent<QRCode>();
+        //qrCode = GameObject.Find("TableAnchor").GetComponent<QRTracking.QRCode>();
+        qrCode = (QRTracking.QRCode)FindObjectOfType<QRTracking.QRCode>();
         if(qrCode==null)
         {
             Debug.Log("No QR Code Detected");

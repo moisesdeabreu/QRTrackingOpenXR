@@ -325,7 +325,7 @@ static const Il2CppRGCTXDefinition s_rgctxValues[27] =
 	{ (Il2CppRGCTXDataType)2, 2297 },
 	{ (Il2CppRGCTXDataType)3, 6959 },
 	{ (Il2CppRGCTXDataType)3, 6960 },
-	{ (Il2CppRGCTXDataType)3, 61636 },
+	{ (Il2CppRGCTXDataType)3, 61637 },
 };
 extern const CustomAttributesCacheGenerator g_Microsoft_MixedReality_Toolkit_Async_AttributeGenerators[];
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Microsoft_MixedReality_Toolkit_Async_CodeGenModule;

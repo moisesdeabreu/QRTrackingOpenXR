@@ -440,6 +440,12 @@ struct PunExplodeViewController_t314A99E6DC5D60E97C5C22511F11CA0951FA756A;
 struct PunPartAssemblyController_t053BAF7E12BF99879B9F2A554D259CFD53C8A792;
 // MRTK.Tutorials.MultiUserCapabilities.PunPlacementHintsController
 struct PunPlacementHintsController_tBD7E21367FC720DB9BB6280231EB208C63B97E1A;
+// Microsoft.MixedReality.QR.QRCode
+struct QRCode_t5AA49003F43DFF79237D84B01B1DAF019ACC7A40;
+// QRTracking.QRCode
+struct QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA;
+// QRManager
+struct QRManager_tBD88B2DE00D2C03A8CD92F9A282052DAB73AD42A;
 // UnityEngine.UI.RectMask2D
 struct RectMask2D_tD909811991B341D752E4C978C89EFB80FA7A2B15;
 // UnityEngine.RectTransform
@@ -476,6 +482,8 @@ struct Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1;
 struct TextButtonTransition_t51491A0543434FBDA97FB36A7A95C483FB6EE16F;
 // UnityEngine.TextGenerator
 struct TextGenerator_t893F256D3587633108E00E5731CDC5A77AFF1B70;
+// UnityEngine.TextMesh
+struct TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273;
 // Photon.Chat.UtilityScripts.TextToggleIsOnTransition
 struct TextToggleIsOnTransition_t138BBDEFB7B6957F27ED0A5E0B4776503FA1436D;
 // UnityEngine.Texture2D
@@ -496,6 +504,8 @@ struct Type_t;
 struct TypedLobby_tD368895EDDB4706F8B68ABCA542E3E697845B1C5;
 // UnityEngine.Events.UnityAction
 struct UnityAction_t22E545F8BE0A62EE051C6A83E209587A0DB1C099;
+// System.Uri
+struct Uri_t4A915E1CC15B2C650F478099AD448E9466CBF612;
 // UnityEngine.UI.VertexHelper
 struct VertexHelper_tDE8B67D3B076061C4F8DF325B0D63ED2E5367E55;
 // System.Void
@@ -616,6 +626,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral693BD22F82043985FDDDDFCF5E8EC15BF8B82934
 IL2CPP_EXTERN_C String_t* _stringLiteral6C066B34F4DB79023C0642AFBC43B25A5327F710;
 IL2CPP_EXTERN_C String_t* _stringLiteral6C8EA4ECB883AD669394FC7A5E304891A38ADED4;
 IL2CPP_EXTERN_C String_t* _stringLiteral710F81E0EEB8CB48BACB8437BA5836E3B5349235;
+IL2CPP_EXTERN_C String_t* _stringLiteral749BB0AECCD7823C7D3A377F023CC4C038083890;
 IL2CPP_EXTERN_C String_t* _stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D;
 IL2CPP_EXTERN_C String_t* _stringLiteral77F781BE1FA4EBA75ACC2DC942D3D87126A499DB;
 IL2CPP_EXTERN_C String_t* _stringLiteral86C677CA2B54E7E4E81E71A6AF30E985B484A0AF;
@@ -724,6 +735,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_m1E85E7CDA3459102B9FD665388
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_m554804AC447B0BA1F93C64E863FF7DB0527AFED9_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectOfType_TisChatGui_t6943DDCBC27D148758239BACA7BBA62A266D9B0F_m2DE69A8EF895D8E499AEEB1FD08483256C1BA3FA_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectOfType_TisEventSystem_t5DC458FCD0355A74CDCCE79287B38B9C4278E39C_m7E9461B4BAE98D88F0E77802CAD823046812B801_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectOfType_TisQRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA_mE2AE3921D06B2D0D0FFB05C7CE32AEB4E262B2B1_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectOfType_TisTableAnchor_tAF49E4CBA85405B01A454ECE485352365D7066AA_mE975654AB13FD9E860B33EA4B9CDE7D4A3516861_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectsOfType_TisPartAssemblyController_t8DD1378DE2B5B04E1708CCE4F6D16FFC91E44573_m95DE796FD55FCC02F041B6774108803CFD476E27_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisGameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319_m26431AC51B9B7A43FBABD10B4923B72B0C578F33_RuntimeMethod_var;
@@ -9630,6 +9642,255 @@ public:
 };
 
 
+// QRTracking.QRCode
+struct QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA  : public MonoBehaviour_t37A501200D970A8257124B0EAE00A0FF3DDC354A
+{
+public:
+	// Microsoft.MixedReality.QR.QRCode QRTracking.QRCode::qrCode
+	QRCode_t5AA49003F43DFF79237D84B01B1DAF019ACC7A40 * ___qrCode_4;
+	// UnityEngine.GameObject QRTracking.QRCode::qrCodeCube
+	GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * ___qrCodeCube_5;
+	// System.Single QRTracking.QRCode::<PhysicalSize>k__BackingField
+	float ___U3CPhysicalSizeU3Ek__BackingField_6;
+	// System.String QRTracking.QRCode::<CodeText>k__BackingField
+	String_t* ___U3CCodeTextU3Ek__BackingField_7;
+	// UnityEngine.TextMesh QRTracking.QRCode::QRID
+	TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 * ___QRID_8;
+	// UnityEngine.TextMesh QRTracking.QRCode::QRNodeID
+	TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 * ___QRNodeID_9;
+	// UnityEngine.TextMesh QRTracking.QRCode::QRText
+	TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 * ___QRText_10;
+	// UnityEngine.TextMesh QRTracking.QRCode::QRVersion
+	TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 * ___QRVersion_11;
+	// UnityEngine.TextMesh QRTracking.QRCode::QRTimeStamp
+	TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 * ___QRTimeStamp_12;
+	// UnityEngine.TextMesh QRTracking.QRCode::QRSize
+	TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 * ___QRSize_13;
+	// UnityEngine.TextMesh QRTracking.QRCode::QRRelativeLocation
+	TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 * ___QRRelativeLocation_14;
+	// UnityEngine.GameObject QRTracking.QRCode::QRInfo
+	GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * ___QRInfo_15;
+	// System.Boolean QRTracking.QRCode::validURI
+	bool ___validURI_16;
+	// System.Boolean QRTracking.QRCode::launch
+	bool ___launch_17;
+	// System.Uri QRTracking.QRCode::uriResult
+	Uri_t4A915E1CC15B2C650F478099AD448E9466CBF612 * ___uriResult_18;
+	// System.Int64 QRTracking.QRCode::lastTimeStamp
+	int64_t ___lastTimeStamp_19;
+	// System.Boolean QRTracking.QRCode::lockstatus
+	bool ___lockstatus_20;
+	// UnityEngine.Vector3 QRTracking.QRCode::QRGlobalPos
+	Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___QRGlobalPos_21;
+	// UnityEngine.Quaternion QRTracking.QRCode::QRGlobalRot
+	Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  ___QRGlobalRot_22;
+
+public:
+	inline static int32_t get_offset_of_qrCode_4() { return static_cast<int32_t>(offsetof(QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA, ___qrCode_4)); }
+	inline QRCode_t5AA49003F43DFF79237D84B01B1DAF019ACC7A40 * get_qrCode_4() const { return ___qrCode_4; }
+	inline QRCode_t5AA49003F43DFF79237D84B01B1DAF019ACC7A40 ** get_address_of_qrCode_4() { return &___qrCode_4; }
+	inline void set_qrCode_4(QRCode_t5AA49003F43DFF79237D84B01B1DAF019ACC7A40 * value)
+	{
+		___qrCode_4 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___qrCode_4), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_qrCodeCube_5() { return static_cast<int32_t>(offsetof(QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA, ___qrCodeCube_5)); }
+	inline GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * get_qrCodeCube_5() const { return ___qrCodeCube_5; }
+	inline GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 ** get_address_of_qrCodeCube_5() { return &___qrCodeCube_5; }
+	inline void set_qrCodeCube_5(GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * value)
+	{
+		___qrCodeCube_5 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___qrCodeCube_5), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_U3CPhysicalSizeU3Ek__BackingField_6() { return static_cast<int32_t>(offsetof(QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA, ___U3CPhysicalSizeU3Ek__BackingField_6)); }
+	inline float get_U3CPhysicalSizeU3Ek__BackingField_6() const { return ___U3CPhysicalSizeU3Ek__BackingField_6; }
+	inline float* get_address_of_U3CPhysicalSizeU3Ek__BackingField_6() { return &___U3CPhysicalSizeU3Ek__BackingField_6; }
+	inline void set_U3CPhysicalSizeU3Ek__BackingField_6(float value)
+	{
+		___U3CPhysicalSizeU3Ek__BackingField_6 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CCodeTextU3Ek__BackingField_7() { return static_cast<int32_t>(offsetof(QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA, ___U3CCodeTextU3Ek__BackingField_7)); }
+	inline String_t* get_U3CCodeTextU3Ek__BackingField_7() const { return ___U3CCodeTextU3Ek__BackingField_7; }
+	inline String_t** get_address_of_U3CCodeTextU3Ek__BackingField_7() { return &___U3CCodeTextU3Ek__BackingField_7; }
+	inline void set_U3CCodeTextU3Ek__BackingField_7(String_t* value)
+	{
+		___U3CCodeTextU3Ek__BackingField_7 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___U3CCodeTextU3Ek__BackingField_7), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_QRID_8() { return static_cast<int32_t>(offsetof(QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA, ___QRID_8)); }
+	inline TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 * get_QRID_8() const { return ___QRID_8; }
+	inline TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 ** get_address_of_QRID_8() { return &___QRID_8; }
+	inline void set_QRID_8(TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 * value)
+	{
+		___QRID_8 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___QRID_8), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_QRNodeID_9() { return static_cast<int32_t>(offsetof(QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA, ___QRNodeID_9)); }
+	inline TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 * get_QRNodeID_9() const { return ___QRNodeID_9; }
+	inline TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 ** get_address_of_QRNodeID_9() { return &___QRNodeID_9; }
+	inline void set_QRNodeID_9(TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 * value)
+	{
+		___QRNodeID_9 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___QRNodeID_9), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_QRText_10() { return static_cast<int32_t>(offsetof(QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA, ___QRText_10)); }
+	inline TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 * get_QRText_10() const { return ___QRText_10; }
+	inline TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 ** get_address_of_QRText_10() { return &___QRText_10; }
+	inline void set_QRText_10(TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 * value)
+	{
+		___QRText_10 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___QRText_10), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_QRVersion_11() { return static_cast<int32_t>(offsetof(QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA, ___QRVersion_11)); }
+	inline TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 * get_QRVersion_11() const { return ___QRVersion_11; }
+	inline TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 ** get_address_of_QRVersion_11() { return &___QRVersion_11; }
+	inline void set_QRVersion_11(TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 * value)
+	{
+		___QRVersion_11 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___QRVersion_11), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_QRTimeStamp_12() { return static_cast<int32_t>(offsetof(QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA, ___QRTimeStamp_12)); }
+	inline TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 * get_QRTimeStamp_12() const { return ___QRTimeStamp_12; }
+	inline TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 ** get_address_of_QRTimeStamp_12() { return &___QRTimeStamp_12; }
+	inline void set_QRTimeStamp_12(TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 * value)
+	{
+		___QRTimeStamp_12 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___QRTimeStamp_12), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_QRSize_13() { return static_cast<int32_t>(offsetof(QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA, ___QRSize_13)); }
+	inline TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 * get_QRSize_13() const { return ___QRSize_13; }
+	inline TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 ** get_address_of_QRSize_13() { return &___QRSize_13; }
+	inline void set_QRSize_13(TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 * value)
+	{
+		___QRSize_13 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___QRSize_13), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_QRRelativeLocation_14() { return static_cast<int32_t>(offsetof(QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA, ___QRRelativeLocation_14)); }
+	inline TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 * get_QRRelativeLocation_14() const { return ___QRRelativeLocation_14; }
+	inline TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 ** get_address_of_QRRelativeLocation_14() { return &___QRRelativeLocation_14; }
+	inline void set_QRRelativeLocation_14(TextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273 * value)
+	{
+		___QRRelativeLocation_14 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___QRRelativeLocation_14), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_QRInfo_15() { return static_cast<int32_t>(offsetof(QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA, ___QRInfo_15)); }
+	inline GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * get_QRInfo_15() const { return ___QRInfo_15; }
+	inline GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 ** get_address_of_QRInfo_15() { return &___QRInfo_15; }
+	inline void set_QRInfo_15(GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * value)
+	{
+		___QRInfo_15 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___QRInfo_15), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_validURI_16() { return static_cast<int32_t>(offsetof(QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA, ___validURI_16)); }
+	inline bool get_validURI_16() const { return ___validURI_16; }
+	inline bool* get_address_of_validURI_16() { return &___validURI_16; }
+	inline void set_validURI_16(bool value)
+	{
+		___validURI_16 = value;
+	}
+
+	inline static int32_t get_offset_of_launch_17() { return static_cast<int32_t>(offsetof(QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA, ___launch_17)); }
+	inline bool get_launch_17() const { return ___launch_17; }
+	inline bool* get_address_of_launch_17() { return &___launch_17; }
+	inline void set_launch_17(bool value)
+	{
+		___launch_17 = value;
+	}
+
+	inline static int32_t get_offset_of_uriResult_18() { return static_cast<int32_t>(offsetof(QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA, ___uriResult_18)); }
+	inline Uri_t4A915E1CC15B2C650F478099AD448E9466CBF612 * get_uriResult_18() const { return ___uriResult_18; }
+	inline Uri_t4A915E1CC15B2C650F478099AD448E9466CBF612 ** get_address_of_uriResult_18() { return &___uriResult_18; }
+	inline void set_uriResult_18(Uri_t4A915E1CC15B2C650F478099AD448E9466CBF612 * value)
+	{
+		___uriResult_18 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___uriResult_18), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_lastTimeStamp_19() { return static_cast<int32_t>(offsetof(QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA, ___lastTimeStamp_19)); }
+	inline int64_t get_lastTimeStamp_19() const { return ___lastTimeStamp_19; }
+	inline int64_t* get_address_of_lastTimeStamp_19() { return &___lastTimeStamp_19; }
+	inline void set_lastTimeStamp_19(int64_t value)
+	{
+		___lastTimeStamp_19 = value;
+	}
+
+	inline static int32_t get_offset_of_lockstatus_20() { return static_cast<int32_t>(offsetof(QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA, ___lockstatus_20)); }
+	inline bool get_lockstatus_20() const { return ___lockstatus_20; }
+	inline bool* get_address_of_lockstatus_20() { return &___lockstatus_20; }
+	inline void set_lockstatus_20(bool value)
+	{
+		___lockstatus_20 = value;
+	}
+
+	inline static int32_t get_offset_of_QRGlobalPos_21() { return static_cast<int32_t>(offsetof(QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA, ___QRGlobalPos_21)); }
+	inline Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  get_QRGlobalPos_21() const { return ___QRGlobalPos_21; }
+	inline Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E * get_address_of_QRGlobalPos_21() { return &___QRGlobalPos_21; }
+	inline void set_QRGlobalPos_21(Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  value)
+	{
+		___QRGlobalPos_21 = value;
+	}
+
+	inline static int32_t get_offset_of_QRGlobalRot_22() { return static_cast<int32_t>(offsetof(QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA, ___QRGlobalRot_22)); }
+	inline Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  get_QRGlobalRot_22() const { return ___QRGlobalRot_22; }
+	inline Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4 * get_address_of_QRGlobalRot_22() { return &___QRGlobalRot_22; }
+	inline void set_QRGlobalRot_22(Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  value)
+	{
+		___QRGlobalRot_22 = value;
+	}
+};
+
+
+// QRManager
+struct QRManager_tBD88B2DE00D2C03A8CD92F9A282052DAB73AD42A  : public MonoBehaviour_t37A501200D970A8257124B0EAE00A0FF3DDC354A
+{
+public:
+	// QRTracking.QRCode QRManager::qrCode
+	QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA * ___qrCode_4;
+	// UnityEngine.Vector3 QRManager::qrPosition
+	Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___qrPosition_5;
+	// UnityEngine.Quaternion QRManager::qrRotation
+	Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  ___qrRotation_6;
+
+public:
+	inline static int32_t get_offset_of_qrCode_4() { return static_cast<int32_t>(offsetof(QRManager_tBD88B2DE00D2C03A8CD92F9A282052DAB73AD42A, ___qrCode_4)); }
+	inline QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA * get_qrCode_4() const { return ___qrCode_4; }
+	inline QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA ** get_address_of_qrCode_4() { return &___qrCode_4; }
+	inline void set_qrCode_4(QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA * value)
+	{
+		___qrCode_4 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___qrCode_4), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_qrPosition_5() { return static_cast<int32_t>(offsetof(QRManager_tBD88B2DE00D2C03A8CD92F9A282052DAB73AD42A, ___qrPosition_5)); }
+	inline Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  get_qrPosition_5() const { return ___qrPosition_5; }
+	inline Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E * get_address_of_qrPosition_5() { return &___qrPosition_5; }
+	inline void set_qrPosition_5(Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  value)
+	{
+		___qrPosition_5 = value;
+	}
+
+	inline static int32_t get_offset_of_qrRotation_6() { return static_cast<int32_t>(offsetof(QRManager_tBD88B2DE00D2C03A8CD92F9A282052DAB73AD42A, ___qrRotation_6)); }
+	inline Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  get_qrRotation_6() const { return ___qrRotation_6; }
+	inline Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4 * get_address_of_qrRotation_6() { return &___qrRotation_6; }
+	inline void set_qrRotation_6(Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  value)
+	{
+		___qrRotation_6 = value;
+	}
+};
+
+
 // MRTK.Tutorials.MultiUserCapabilities.TableAnchor
 struct TableAnchor_tAF49E4CBA85405B01A454ECE485352365D7066AA  : public MonoBehaviour_t37A501200D970A8257124B0EAE00A0FF3DDC354A
 {
@@ -13145,6 +13406,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlacementHintsControllerDelegate__ctor_m
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlacementHintsController_add_OnTogglePlacementHints_m74DE84CC6DD60CCD720BFB6797EFA9C145A040D8 (PlacementHintsController_t705A0244683A721236F3F5EA00041AC7EEA92EEC * __this, PlacementHintsControllerDelegate_tA8097CCD8F1D1CEFDF484D7D9E4CFFB5E6083F87 * ___value0, const RuntimeMethod* method);
 // System.Void MRTK.Tutorials.GettingStarted.PlacementHintsController::set_IsPunEnabled(System.Boolean)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlacementHintsController_set_IsPunEnabled_m3F5768D83A150962864A1DF4E4A041A75E006B00_inline (PlacementHintsController_t705A0244683A721236F3F5EA00041AC7EEA92EEC * __this, bool ___value0, const RuntimeMethod* method);
+// !!0 UnityEngine.Object::FindObjectOfType<QRTracking.QRCode>()
+inline QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA * Object_FindObjectOfType_TisQRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA_mE2AE3921D06B2D0D0FFB05C7CE32AEB4E262B2B1 (const RuntimeMethod* method)
+{
+	return ((  QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA * (*) (const RuntimeMethod*))Object_FindObjectOfType_TisRuntimeObject_m25AA6DB6AABFD5D66AFA1A8C0E91A7AF61429C37_gshared)(method);
+}
+// UnityEngine.Vector3 QRTracking.QRCode::getQRGlobalPosition()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  QRCode_getQRGlobalPosition_m88FDB1C0F61A54C02C5B7E7B9EBDA4A16F3B7051 (QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA * __this, const RuntimeMethod* method);
+// UnityEngine.Quaternion QRTracking.QRCode::getQRGlobalRotation()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  QRCode_getQRGlobalRotation_mDD6E00BF941FDD094D578FE2A03A3F9B2341979B (QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA * __this, const RuntimeMethod* method);
 // !!0 UnityEngine.Component::GetComponent<UnityEngine.UI.Text>()
 inline Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * Component_GetComponent_TisText_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1_m2D99AC2081683F963C56EC738451EC0B59B5D137 (Component_t62FBC8D2420DA4BE9037AFE430740F6B3EECA684 * __this, const RuntimeMethod* method)
 {
@@ -21152,6 +21422,122 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PunPlacementHintsController__ctor_mB1F6C
 {
 	{
 		MonoBehaviourPun__ctor_mCE5059964AC90D4EBEB442C9A3B67F92A966E617(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void QRManager::Start()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QRManager_Start_m80368A0B2CFFB07CA047EF4CC0EF9BD57E05E5FB (QRManager_tBD88B2DE00D2C03A8CD92F9A282052DAB73AD42A * __this, const RuntimeMethod* method)
+{
+	{
+		// }
+		return;
+	}
+}
+// System.Void QRManager::Update()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QRManager_Update_mA007EC4F773D1E1789E4F8824B415DAEC44A5F19 (QRManager_tBD88B2DE00D2C03A8CD92F9A282052DAB73AD42A * __this, const RuntimeMethod* method)
+{
+	{
+		// }
+		return;
+	}
+}
+// System.Void QRManager::GetPosition()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QRManager_GetPosition_mBE0D44976C0123A291FEB63B185EF28883EF3851 (QRManager_tBD88B2DE00D2C03A8CD92F9A282052DAB73AD42A * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisQRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA_mE2AE3921D06B2D0D0FFB05C7CE32AEB4E262B2B1_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral749BB0AECCD7823C7D3A377F023CC4C038083890);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		// qrCode = (QRTracking.QRCode)FindObjectOfType<QRTracking.QRCode>();
+		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
+		QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA * L_0;
+		L_0 = Object_FindObjectOfType_TisQRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA_mE2AE3921D06B2D0D0FFB05C7CE32AEB4E262B2B1(/*hidden argument*/Object_FindObjectOfType_TisQRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA_mE2AE3921D06B2D0D0FFB05C7CE32AEB4E262B2B1_RuntimeMethod_var);
+		__this->set_qrCode_4(L_0);
+		// if(qrCode==null)
+		QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA * L_1 = __this->get_qrCode_4();
+		bool L_2;
+		L_2 = Object_op_Equality_mEE9EC7EB5C7DC3E95B94AB904E1986FC4D566D54(L_1, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
+		V_0 = L_2;
+		bool L_3 = V_0;
+		if (!L_3)
+		{
+			goto IL_002a;
+		}
+	}
+	{
+		// Debug.Log("No QR Code Detected");
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
+		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(_stringLiteral749BB0AECCD7823C7D3A377F023CC4C038083890, /*hidden argument*/NULL);
+		// return;
+		goto IL_004c;
+	}
+
+IL_002a:
+	{
+		// qrPosition = qrCode.getQRGlobalPosition();
+		QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA * L_4 = __this->get_qrCode_4();
+		NullCheck(L_4);
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_5;
+		L_5 = QRCode_getQRGlobalPosition_m88FDB1C0F61A54C02C5B7E7B9EBDA4A16F3B7051(L_4, /*hidden argument*/NULL);
+		__this->set_qrPosition_5(L_5);
+		// qrRotation = qrCode.getQRGlobalRotation();
+		QRCode_t2CB64CC1466C80480B6C82A5CE98A1FC1CF0D8CA * L_6 = __this->get_qrCode_4();
+		NullCheck(L_6);
+		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_7;
+		L_7 = QRCode_getQRGlobalRotation_mDD6E00BF941FDD094D578FE2A03A3F9B2341979B(L_6, /*hidden argument*/NULL);
+		__this->set_qrRotation_6(L_7);
+	}
+
+IL_004c:
+	{
+		// }
+		return;
+	}
+}
+// System.Void QRManager::UpdatePosition(UnityEngine.GameObject)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QRManager_UpdatePosition_m7915B49CA6854FA281748CC436123D0C92302A45 (QRManager_tBD88B2DE00D2C03A8CD92F9A282052DAB73AD42A * __this, GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * ___gameObject0, const RuntimeMethod* method)
+{
+	{
+		// gameObject.transform.position = qrPosition;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_0 = ___gameObject0;
+		NullCheck(L_0);
+		Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * L_1;
+		L_1 = GameObject_get_transform_m16A80BB92B6C8C5AB696E447014D45EDF1E4DE34(L_0, /*hidden argument*/NULL);
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_2 = __this->get_qrPosition_5();
+		NullCheck(L_1);
+		Transform_set_position_mB169E52D57EEAC1E3F22C5395968714E4F00AC91(L_1, L_2, /*hidden argument*/NULL);
+		// gameObject.transform.rotation = qrRotation;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_3 = ___gameObject0;
+		NullCheck(L_3);
+		Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * L_4;
+		L_4 = GameObject_get_transform_m16A80BB92B6C8C5AB696E447014D45EDF1E4DE34(L_3, /*hidden argument*/NULL);
+		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_5 = __this->get_qrRotation_6();
+		NullCheck(L_4);
+		Transform_set_rotation_m1B5F3D4CE984AB31254615C9C71B0E54978583B4(L_4, L_5, /*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
+// System.Void QRManager::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QRManager__ctor_mFF0233936C986EAA09CC4054550CFB0312293A53 (QRManager_tBD88B2DE00D2C03A8CD92F9A282052DAB73AD42A * __this, const RuntimeMethod* method)
+{
+	{
+		MonoBehaviour__ctor_mC0995D847F6A95B1A553652636C38A2AA8B13BED(__this, /*hidden argument*/NULL);
 		return;
 	}
 }

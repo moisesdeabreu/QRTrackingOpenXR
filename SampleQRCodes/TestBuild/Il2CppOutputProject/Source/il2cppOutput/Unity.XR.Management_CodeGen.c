@@ -316,13 +316,13 @@ static const Il2CppRGCTXDefinition s_rgctxValues[19] =
 {
 	{ (Il2CppRGCTXDataType)1, 554 },
 	{ (Il2CppRGCTXDataType)2, 554 },
-	{ (Il2CppRGCTXDataType)3, 61557 },
-	{ (Il2CppRGCTXDataType)2, 552 },
 	{ (Il2CppRGCTXDataType)3, 61558 },
+	{ (Il2CppRGCTXDataType)2, 552 },
+	{ (Il2CppRGCTXDataType)3, 61559 },
 	{ (Il2CppRGCTXDataType)2, 553 },
-	{ (Il2CppRGCTXDataType)3, 61556 },
+	{ (Il2CppRGCTXDataType)3, 61557 },
 	{ (Il2CppRGCTXDataType)2, 551 },
-	{ (Il2CppRGCTXDataType)3, 61024 },
+	{ (Il2CppRGCTXDataType)3, 61025 },
 	{ (Il2CppRGCTXDataType)3, 33087 },
 	{ (Il2CppRGCTXDataType)3, 33086 },
 	{ (Il2CppRGCTXDataType)3, 15682 },
@@ -330,8 +330,8 @@ static const Il2CppRGCTXDefinition s_rgctxValues[19] =
 	{ (Il2CppRGCTXDataType)1, 1150 },
 	{ (Il2CppRGCTXDataType)3, 15681 },
 	{ (Il2CppRGCTXDataType)2, 3627 },
-	{ (Il2CppRGCTXDataType)3, 61570 },
 	{ (Il2CppRGCTXDataType)3, 61571 },
+	{ (Il2CppRGCTXDataType)3, 61572 },
 	{ (Il2CppRGCTXDataType)2, 555 },
 };
 extern const CustomAttributesCacheGenerator g_Unity_XR_Management_AttributeGenerators[];

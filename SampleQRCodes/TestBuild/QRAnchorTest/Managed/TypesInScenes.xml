@@ -77,6 +77,7 @@
 		<type fullname="MRTK.Tutorials.MultiUserCapabilities.PunPlacementHintsController" preserve="nothing"/>
 		<type fullname="MRTK.Tutorials.MultiUserCapabilities.TableAnchor" preserve="nothing"/>
 		<type fullname="MRTK.Tutorials.MultiUserCapabilities.TableAnchorAsParent" preserve="nothing"/>
+		<type fullname="QRManager" preserve="nothing"/>
 		<type fullname="QRTracking.HideAndShow" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Microsoft.MixedReality.OpenXR">
