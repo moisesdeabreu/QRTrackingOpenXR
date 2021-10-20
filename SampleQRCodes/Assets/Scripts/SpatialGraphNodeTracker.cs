@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 using Microsoft.MixedReality.Toolkit.Utilities;
 
 #if MIXED_REALITY_OPENXR
@@ -11,6 +12,13 @@ namespace QRTracking
 {
     public class SpatialGraphNodeTracker : MonoBehaviour
     {
+        //public static SpatialGraphNodeTracker sNode;
+
+        //private Transform QRtransform;
+
+        //[Windows.Foundation.Metadata.Overload("CreateCoordinateSystemForNode")]
+        //public static SpatialCoordinateSystem CreateCoordinateSystemForNode(Guid nodeId);
+
         private System.Guid _id;
         private SpatialGraphNode node;
 
@@ -48,6 +56,7 @@ namespace QRTracking
                 }
 
                 gameObject.transform.SetPositionAndRotation(pose.position, pose.rotation);
+                //setQRposition(pose.position, pose.rotation);
                 //Debug.Log("Id= " + id + " QRPose = " +  pose.position.ToString("F7") + " QRRot = "  +  pose.rotation.ToString("F7"));
             }
         }
@@ -60,5 +69,37 @@ namespace QRTracking
                 Debug.Log("Initialize SpatialGraphNode Id= " + Id);
             }
         }
+
+
+        //void MyApplication::OnAddedQRCode(const QRCodeAddedEventArgs& args)
+        //{
+        //    QRCode code = args.Code();
+        //    std::vector<float3> qrVertices = CreateRectangle(code.PhysicalSideLength(), code.PhysicalSideLength());
+        //    std::vector<unsigned short> qrCodeIndices = TriangulatePoints(qrVertices);
+        //    XMFLOAT3 qrAreaColor = XMFLOAT3(DirectX::Colors::Aqua);
+
+        //    SpatialCoordinateSystem qrCoordinateSystem = SpatialGraphInteropPreview::CreateCoordinateSystemForNode(code.SpatialGraphNodeId());
+        //    std::shared_ptr<SceneObject> m_qrShape =
+        //        std::make_shared<SceneObject>(
+        //            m_deviceResources,
+        //            qrVertices,
+        //            qrCodeIndices,
+        //            qrAreaColor,
+        //            qrCoordinateSystem);
+
+        //    m_sceneController->AddSceneObject(m_qrShape);
+        //}
+
+
+        //public void setQRposition(Vector3 QRposition, Quaternion QRrotation)
+        //{
+        //    QRtransform.position = QRposition;
+        //    QRtransform.rotation = QRrotation;
+        //}
+
+        //public void getQRposition()
+        //{
+        //    return QRtransform;
+        //}
     }
 }

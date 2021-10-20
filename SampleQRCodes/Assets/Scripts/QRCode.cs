@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +8,7 @@ namespace QRTracking
     public class QRCode : MonoBehaviour
     {
         public Microsoft.MixedReality.QR.QRCode qrCode;
+        //public static QRCode qrCodeStatic;
         private GameObject qrCodeCube;
 
         public float PhysicalSize { get; private set; }
@@ -20,15 +20,24 @@ namespace QRTracking
         private TextMesh QRVersion;
         private TextMesh QRTimeStamp;
         private TextMesh QRSize;
+        private TextMesh QRRelativeLocation;
         private GameObject QRInfo;
         private bool validURI = false;
         private bool launch = false;
         private System.Uri uriResult;
         private long lastTimeStamp = 0;
+        private bool lockstatus = false;
+        private Vector3 QRGlobalPos;
+        private Quaternion QRGlobalRot;
 
         // Use this for initialization
         void Start()
         {
+            //if (qrCodeStatic && qrCodeStatic != this)
+            //    Destroy(this);
+            //else
+            //    qrCodeStatic = this;
+            
             PhysicalSize = 0.1f;
             CodeText = "Dummy";
             if (qrCode == null)
@@ -47,6 +56,7 @@ namespace QRTracking
             QRVersion = QRInfo.transform.Find("QRVersion").gameObject.GetComponent<TextMesh>();
             QRTimeStamp = QRInfo.transform.Find("QRTimeStamp").gameObject.GetComponent<TextMesh>();
             QRSize = QRInfo.transform.Find("QRSize").gameObject.GetComponent<TextMesh>();
+            QRRelativeLocation = QRInfo.transform.Find("QRRelativeLocation").gameObject.GetComponent<TextMesh>();
 
             QRID.text = "Id:" + qrCode.Id.ToString();
             QRNodeID.text = "NodeId:" + qrCode.SpatialGraphNodeId.ToString();
@@ -58,7 +68,15 @@ namespace QRTracking
                 QRText.color = Color.blue;
             }
 
+            if (lockstatus)
+            {
+                lockstatus = false;
+                setQRGlobalPosition(qrCodeCube.transform.position, qrCodeCube.transform.rotation);
+                Debug.Log("QR Global Position is Locked");
+            }
+
             QRVersion.text = "Ver: " + qrCode.Version;
+            QRRelativeLocation.text = "Relative Location: pos_x = " + qrCodeCube.transform.position.x + "pos_y = " + qrCodeCube.transform.position.y + "pos_z = " + qrCodeCube.transform.position.z;
             QRSize.text = "Size:" + qrCode.PhysicalSideLength.ToString("F04") + "m";
             QRTimeStamp.text = "Time:" + qrCode.LastDetectedTime.ToString("MM/dd/yyyy HH:mm:ss.fff");
             QRTimeStamp.color = Color.yellow;
@@ -75,8 +93,16 @@ namespace QRTracking
                 QRTimeStamp.text = "Time:" + qrCode.LastDetectedTime.ToString("MM/dd/yyyy HH:mm:ss.fff");
                 QRTimeStamp.color = QRTimeStamp.color==Color.yellow? Color.white: Color.yellow;
                 PhysicalSize = qrCode.PhysicalSideLength;
-                Debug.Log("Id= " + qrCode.Id + "NodeId= " + qrCode.SpatialGraphNodeId + " PhysicalSize = " + PhysicalSize + " TimeStamp = " + qrCode.SystemRelativeLastDetectedTime.Ticks + " Time = " + qrCode.LastDetectedTime.ToString("MM/dd/yyyy HH:mm:ss.fff"));
+                QRRelativeLocation.text = "Relative Location: pos_x = " + qrCodeCube.transform.position.x + "pos_y = " + qrCodeCube.transform.position.y + "pos_z = " + qrCodeCube.transform.position.z;
+                
+                if (lockstatus)
+                {
+                    lockstatus = false;
+                    setQRGlobalPosition(qrCodeCube.transform.position, qrCodeCube.transform.rotation);
+                    Debug.Log("QR Global Position is Locked");
+                }
 
+                Debug.Log("Id= " + qrCode.Id + "NodeId= " + qrCode.SpatialGraphNodeId + " PhysicalSize = " + PhysicalSize + " TimeStamp = " + qrCode.SystemRelativeLastDetectedTime.Ticks + " Time = " + qrCode.LastDetectedTime.ToString("MM/dd/yyyy HH:mm:ss.fff"));
                 qrCodeCube.transform.localPosition = new Vector3(PhysicalSize / 2.0f, PhysicalSize / 2.0f, 0.0f);
                 qrCodeCube.transform.localScale = new Vector3(PhysicalSize, PhysicalSize, 0.005f);
                 lastTimeStamp = qrCode.SystemRelativeLastDetectedTime.Ticks;
@@ -88,6 +114,7 @@ namespace QRTracking
         void Update()
         {
             UpdatePropertiesDisplay();
+
             if (launch)
             {
                 launch = false;
@@ -110,6 +137,39 @@ namespace QRTracking
                 launch = true;
             }
 // eventData.Use(); // Mark the event as used, so it doesn't fall through to other handlers.
+        }
+
+        public void setQRGlobalPosition(Vector3 QRPose, Quaternion QRRotation)
+        {
+            QRGlobalPos = QRPose;
+            QRGlobalRot = QRRotation;
+        }
+
+        public void setQRGlobalLocation()
+        {
+            QRGlobalPos = qrCodeCube.transform.position;
+            QRGlobalRot = qrCodeCube.transform.rotation;
+        }
+
+        public void moveToQR(GameObject obj){
+            obj.transform.position = QRGlobalPos;
+            obj.transform.rotation = QRGlobalRot;
+            //obj.transform.position = QRCode.qrCodeStatic.getQRGlobalPosition();
+        }
+
+        public void setLockStatus()
+        {
+            lockstatus = true;
+        }
+
+        public Vector3 getQRGlobalPosition()
+        {
+            return QRGlobalPos;
+        }
+        
+        public Quaternion getQRGlobalRotation()
+        {
+            return QRGlobalRot;
         }
     }
 }

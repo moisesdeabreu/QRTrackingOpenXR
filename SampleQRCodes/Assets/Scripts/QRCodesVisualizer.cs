@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 
 using System.Collections.Generic;
 
@@ -10,7 +10,7 @@ namespace QRTracking
     public class QRCodesVisualizer : MonoBehaviour
     {
         public GameObject qrCodePrefab;
-
+        
         private System.Collections.Generic.SortedDictionary<System.Guid, GameObject> qrCodesObjectsList;
         private bool clearExisting = false;
 
@@ -101,7 +101,9 @@ namespace QRTracking
                     if (action.type == ActionData.Type.Added)
                     {
                         GameObject qrCodeObject = Instantiate(qrCodePrefab, new Vector3(0, 0, 0), Quaternion.identity);
+                        // Following code decide the position of the qr code.
                         qrCodeObject.GetComponent<SpatialGraphNodeTracker>().Id = action.qrCode.SpatialGraphNodeId;
+                        Debug.Log(action.qrCode.SpatialGraphNodeId);
                         qrCodeObject.GetComponent<QRCode>().qrCode = action.qrCode;
                         qrCodesObjectsList.Add(action.qrCode.Id, qrCodeObject);
                     }
