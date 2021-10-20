@@ -68,12 +68,7 @@ namespace QRTracking
                 QRText.color = Color.blue;
             }
 
-            if (lockstatus)
-            {
-                lockstatus = false;
-                setQRGlobalPosition(qrCodeCube.transform.position, qrCodeCube.transform.rotation);
-                Debug.Log("QR Global Position is Locked");
-            }
+            setQRGlobalLocation();
 
             QRVersion.text = "Ver: " + qrCode.Version;
             QRRelativeLocation.text = "Relative Location: pos_x = " + qrCodeCube.transform.position.x + "pos_y = " + qrCodeCube.transform.position.y + "pos_z = " + qrCodeCube.transform.position.z;
@@ -94,14 +89,7 @@ namespace QRTracking
                 QRTimeStamp.color = QRTimeStamp.color==Color.yellow? Color.white: Color.yellow;
                 PhysicalSize = qrCode.PhysicalSideLength;
                 QRRelativeLocation.text = "Relative Location: pos_x = " + qrCodeCube.transform.position.x + "pos_y = " + qrCodeCube.transform.position.y + "pos_z = " + qrCodeCube.transform.position.z;
-                
-                if (lockstatus)
-                {
-                    lockstatus = false;
-                    setQRGlobalPosition(qrCodeCube.transform.position, qrCodeCube.transform.rotation);
-                    Debug.Log("QR Global Position is Locked");
-                }
-
+                setQRGlobalLocation();
                 Debug.Log("Id= " + qrCode.Id + "NodeId= " + qrCode.SpatialGraphNodeId + " PhysicalSize = " + PhysicalSize + " TimeStamp = " + qrCode.SystemRelativeLastDetectedTime.Ticks + " Time = " + qrCode.LastDetectedTime.ToString("MM/dd/yyyy HH:mm:ss.fff"));
                 qrCodeCube.transform.localPosition = new Vector3(PhysicalSize / 2.0f, PhysicalSize / 2.0f, 0.0f);
                 qrCodeCube.transform.localScale = new Vector3(PhysicalSize, PhysicalSize, 0.005f);
