@@ -1,17 +1,15 @@
-using System.Collections;
 
 using System.Collections.Generic;
-
 using UnityEngine;
 
-using Microsoft.MixedReality.QR;
 namespace QRTracking
 {
     public class QRCodesVisualizer : MonoBehaviour
     {
         public GameObject qrCodePrefab;
-        
-        private System.Collections.Generic.SortedDictionary<System.Guid, GameObject> qrCodesObjectsList;
+
+        private SortedDictionary<System.Guid, GameObject> qrCodesObjectsList;
+        private Queue<ActionData> pendingActions = new Queue<ActionData>();
         private bool clearExisting = false;
 
         struct ActionData
@@ -32,18 +30,12 @@ namespace QRTracking
             }
         }
 
-        private System.Collections.Generic.Queue<ActionData> pendingActions = new Queue<ActionData>();
-        void Awake()
-        {
-
-        }
-
         // Use this for initialization
         void Start()
         {
             Debug.Log("QRCodesVisualizer start");
             qrCodesObjectsList = new SortedDictionary<System.Guid, GameObject>();
-
+            ClearScene();
             QRCodesManager.Instance.QRCodesTrackingStateChanged += Instance_QRCodesTrackingStateChanged;
             QRCodesManager.Instance.QRCodeAdded += Instance_QRCodeAdded;
             QRCodesManager.Instance.QRCodeUpdated += Instance_QRCodeUpdated;
@@ -53,6 +45,29 @@ namespace QRTracking
                 throw new System.Exception("Prefab not assigned");
             }
         }
+
+        void ClearScene_old()
+        {
+            GameObject[] objects = FindObjectsOfType<GameObject>();
+            for (int i = 0; i < objects.Length; i++)
+            {
+                if (objects[i].GetComponent<SpatialGraphNodeTracker>() !=null)
+                {
+                    Destroy(objects[i]);
+                }
+            }
+        }
+
+        void ClearScene()
+        {
+            QRCode[] QRCodes= FindObjectsOfType<QRCode>();
+            foreach (QRCode qrcode in QRCodes) 
+            {
+                Destroy(qrcode.gameObject);
+            }
+
+        }
+
         private void Instance_QRCodesTrackingStateChanged(object sender, bool status)
         {
             if (!status)
@@ -98,12 +113,12 @@ namespace QRTracking
                 while (pendingActions.Count > 0)
                 {
                     var action = pendingActions.Dequeue();
+                    Debug.Log($"QRCodesVisualizer HandleEvents: {action.type}");
+
                     if (action.type == ActionData.Type.Added)
                     {
                         GameObject qrCodeObject = Instantiate(qrCodePrefab, new Vector3(0, 0, 0), Quaternion.identity);
-                        // Following code decide the position of the qr code.
                         qrCodeObject.GetComponent<SpatialGraphNodeTracker>().Id = action.qrCode.SpatialGraphNodeId;
-                        Debug.Log(action.qrCode.SpatialGraphNodeId);
                         qrCodeObject.GetComponent<QRCode>().qrCode = action.qrCode;
                         qrCodesObjectsList.Add(action.qrCode.Id, qrCodeObject);
                     }

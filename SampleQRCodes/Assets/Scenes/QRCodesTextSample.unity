@@ -436,6 +436,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &289585095 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8574176126021304914, guid: 7af862c066e4ccc46a0763507450c436,
+    type: 3}
+  m_PrefabInstance: {fileID: 8574176126807218048}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &289585099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289585095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c011a6cf24698544bfd05b3bb6c96da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  qrCodePrefab: {fileID: 8677291145017186710, guid: 40269c1da84b36543b12c5acac546854,
+    type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1150,13 +1170,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5965690411455736444, guid: 231ca82aead091a43bc502513e22998f,
         type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965690411455736444, guid: 231ca82aead091a43bc502513e22998f,
+        type: 3}
       propertyPath: qrCodeInput
       value: 
       objectReference: {fileID: 88068985}
+    - target: {fileID: 5965690411455736445, guid: 231ca82aead091a43bc502513e22998f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965690411455736445, guid: 231ca82aead091a43bc502513e22998f,
+        type: 3}
+      propertyPath: AutoStartQRTracking
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5965690411455736447, guid: 231ca82aead091a43bc502513e22998f,
         type: 3}
       propertyPath: m_Name
       value: QRCodesTextManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965690411455736447, guid: 231ca82aead091a43bc502513e22998f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 231ca82aead091a43bc502513e22998f, type: 3}
@@ -1171,6 +1211,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: QRCodesModel3dShow
+      objectReference: {fileID: 0}
+    - target: {fileID: 8574176126021304914, guid: 7af862c066e4ccc46a0763507450c436,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8574176126021304915, guid: 7af862c066e4ccc46a0763507450c436,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8574176126021304916, guid: 7af862c066e4ccc46a0763507450c436,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8574176126021304916, guid: 7af862c066e4ccc46a0763507450c436,
+        type: 3}
+      propertyPath: AutoStartQRTracking
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8574176126021304917, guid: 7af862c066e4ccc46a0763507450c436,
         type: 3}

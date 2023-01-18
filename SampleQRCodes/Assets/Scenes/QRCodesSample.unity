@@ -566,7 +566,7 @@ PrefabInstance:
         type: 3}
       propertyPath: qrCodePrefab
       value: 
-      objectReference: {fileID: 8677291145017186710, guid: 40269c1da84b36543b12c5acac546854,
+      objectReference: {fileID: 8677291145017186710, guid: b4397263d73fcb5488dfb81d7f3cbc02,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ceaea61be84db74ca74378863e9c03e, type: 3}
@@ -692,6 +692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acda46f9a10600445afec73a866b68d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textQR: {fileID: 0}
 --- !u!4 &732017258
 Transform:
   m_ObjectHideFlags: 0
